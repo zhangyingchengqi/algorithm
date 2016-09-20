@@ -35,7 +35,11 @@ public class Test1 {
 		Hashtable ht=new Hashtable();
 		LinkedListType previous=null;
 		while(    node!=null ){
+
 			if(  ht.containsKey(node.t)   ){
+
+
+
 				//Ö´ÐÐÉ¾³ý
 				previous.nextNode=node.nextNode;
 			}else{
