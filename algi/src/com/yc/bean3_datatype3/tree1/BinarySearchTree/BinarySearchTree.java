@@ -2,38 +2,38 @@ package com.yc.bean3_datatype3.tree1.BinarySearchTree;
 
 /**
  * 二叉排序树
- *
- *public void insert( Comparable element )       //添加新节点到树中，注意，不能添加相同元素. 
- *private BinaryNode insert(Comparable element, BinaryNode root)
- *public void remove( Comparable element)     //从树中删除指定元素. 
- *private BinaryNode remove(Comparable element, BinaryNode root)
+ *<br />
+ *public void insert( Comparable element )       //添加新节点到树中，注意，不能添加相同元素.<br /> 
+ *private BinaryNode insert(Comparable element, BinaryNode root)<br />
+ *public void remove( Comparable element)     //从树中删除指定元素. <br />
+ *private BinaryNode remove(Comparable element, BinaryNode root)<br />
 
- *public boolean isEmpty()
- *public void makeEmpty()
+ *public boolean isEmpty()<br />
+ *public void makeEmpty()<br />
  *
- **********************查询部分*********************
- *public Comparable  find( x)      //递归实现查找树中 键值为 x的元素
- *private BinaryNode find(  Comparable element, BinaryNode t  );
- *public Comparable  iterativeFind( x)      //非递归实现查找树中 键值为 x的元素
- *private BinaryNode iterativeFind(  Comparable element, BinaryNode t  );
- *public Comparable findMin()   //查找树中最小值
- *private BinaryNode findMin(  BinaryNode root  )
- *public Comparable findMax()   //查找树中最大值
- *private BinaryNode findMax(  BinaryNode root  )
+ *<br />*********************查询部分*********************<br />
+ *public Comparable  find( x)      //递归实现查找树中 键值为 x的元素<br />
+ *private BinaryNode find(  Comparable element, BinaryNode t  );<br />
+ *public Comparable  iterativeFind( x)      //非递归实现查找树中 键值为 x的元素<br />
+ *private BinaryNode iterativeFind(  Comparable element, BinaryNode t  );<br />
+ *public Comparable findMin()   //查找树中最小值<br />
+ *private BinaryNode findMin(  BinaryNode root  )<br />
+ *public Comparable findMax()   //查找树中最大值<br />
+ *private BinaryNode findMax(  BinaryNode root  )<br />
  *
- **********************输出部分*********************
- *public void printTreePreOrder()         //前序遍历
- *private void printTreePreOrder(   BinaryNode root    )
- *public void printTreeInOrder()         //中序遍历
- *private void printTreeInOrder(   BinaryNode root    )
- *public void printTreePostOrder()         //后序遍历
- *private void printTreePostOrder(   BinaryNode root    )
+ *<br />*********************输出部分*********************<br />
+ *public void printTreePreOrder()         //前序遍历<br />
+ *private void printTreePreOrder(   BinaryNode root    )<br />
+ *public void printTreeInOrder()         //中序遍历<br />
+ *private void printTreeInOrder(   BinaryNode root    )<br />
+ *public void printTreePostOrder()         //后序遍历<br />
+ *private void printTreePostOrder(   BinaryNode root    )<br />
  *
- *public void print();      //输出二叉树的层次结构
- *private void print(BinaryNode root, Comparable element,int side);     
+ *public void print();      //输出二叉树的层次结构<br />
+ *private void print(BinaryNode root, Comparable element,int side);    <br /> 
  */
 public class BinarySearchTree {
-	private BinaryNode root;
+	protected BinaryNode root;
 	
 	public BinarySearchTree(){
 		this.root=null;
@@ -66,7 +66,7 @@ public class BinarySearchTree {
 	 * @param t:要查找的子树
 	 * @return:最大值所在的节点
 	 */
-	private BinaryNode findMax(  BinaryNode root  ){
+	protected BinaryNode findMax(  BinaryNode root  ){
 		if(root!=null){
 			while(root.right!=null){
 				root=root.right;
@@ -105,7 +105,7 @@ public class BinarySearchTree {
 		BinaryNode node=find(    element, root);
 		return node==null?null:node.element;
 	}
-	private BinaryNode find(  Comparable element, BinaryNode root  ){
+	protected BinaryNode find(  Comparable element, BinaryNode root  ){
 		if( root==null){
 			return null;
 		}

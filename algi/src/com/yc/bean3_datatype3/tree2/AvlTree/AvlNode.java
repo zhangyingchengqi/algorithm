@@ -2,23 +2,17 @@ package com.yc.bean3_datatype3.tree2.AvlTree;
 
 import com.yc.bean3_datatype3.tree1.BinarySearchTree.*;
 
-public class AvlNode  {
+public class AvlNode  extends BinaryNode{
 	public int height; // 高度
-
-	public Comparable element;   //元素 
-	public AvlNode left;   //左节点
-	public AvlNode right;  //右节点
 	
-	 AvlNode( Comparable theElement )
+	public AvlNode( Comparable theElement )
      {
          this( theElement, null, null );
      }
 
-     AvlNode( Comparable theElement, AvlNode lt, AvlNode rt )
+	public AvlNode( Comparable theElement, AvlNode lt, AvlNode rt )
      {
-         element  = theElement;
-         left     = lt;
-         right    = rt;
+        super(  theElement, lt, rt);
          height   = 0;
      }
      
